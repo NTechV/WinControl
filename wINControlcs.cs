@@ -1,6 +1,6 @@
-﻿using System;
+﻿
 using Microsoft.Win32;
-using System.Diagnostics;
+
 
 
 
@@ -57,9 +57,17 @@ namespace Win11TaskbarControl
 
      public void kill()
         {
-           
+          System.Diagnostics.Process ki = new System.Diagnostics.Process();
+            ki.StartInfo.FileName = "h.bat"; // h.bat is to kill the proccess
+            ki.Start();
 
+        }
+        public void startexplorer()
+        {
 
+            System.Diagnostics.Process process = new System.Diagnostics.Process(); // procces I was going to orginaly name it st but the auto feature did it as proccess for me :-)
+            process.StartInfo.FileName = "j.bat";
+            process.Start();
         }
 
      
